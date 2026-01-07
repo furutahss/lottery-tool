@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Instagram ID Lottery Tool
 
-## Getting Started
+Instagramのキャンペーンやプレゼント企画などで活用できる、ID抽選ツールです。 
 
-First, run the development server:
+フロントエンド技術のみで構築されており、入力されたデータがサーバーに送信されることはありません。
+
+## 🚀 デモ
+
+https://furutahss.github.io/lottery-tool
+
+## ✨ 特徴
+
+- **簡単入力**: Instagram IDを改行またはカンマ区切りで一括入力可能。
+- **Qiita風UI**: 各IDをQiitaのタグのような親しみやすいデザインで表示。
+- **動的な演出**: 抽選開始ボタンでIDが激しくシャッフルされ、当選者が浮かび上がるアニメーション。
+- **お祝い演出**: 当選が決まった瞬間に紙吹雪（Confetti）でお祝い。
+- **完全静的運用**: GitHub Pagesでホスト可能。プライバシーに配慮したクライアントサイド処理。
+
+## 🛠 技術スタック
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animation**: Framer Motion / canvas-confetti
+- **UI Components**: shadcn/ui
+- **Testing**: Vitest / React Testing Library
+- **Deployment**: GitHub Actions -> GitHub Pages
+
+## 📦 開発手順
+
+### セットアップ
+
+```bash
+npm install
+```
+
+### 開発用サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`http://localhost:3000` で確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### テストの実行
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+```
 
-## Learn More
+### ビルド（静的書き出し）
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`out` ディレクトリに静的ファイルが生成されます。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 デプロイ
 
-## Deploy on Vercel
+このリポジトリは GitHub Actions による自動デプロイが設定されています。 
+`main` ブランチにプッシュされると、自動的にビルドと GitHub Pages への反映が行われます。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. GitHub リポジトリの `Settings > Pages` を開く。
+2. `Build and deployment > Source` を **"GitHub Actions"** に設定する。
