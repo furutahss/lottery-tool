@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Instagram ID 抽選ツールCreate Next App",
+  title: "Instagram ID 抽選ツール",
   description: "インスタのキャンペーンなどで使える、IDをランダムに選出する無料ツールです。",
 };
 

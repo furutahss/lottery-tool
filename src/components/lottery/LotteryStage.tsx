@@ -59,7 +59,7 @@ export const LotteryStage = ({ initialIds, winnerCount, onBack }: LotteryStagePr
           <p className="text-blue-600 font-bold mb-2">当選者</p>
           <div className="flex justify-center gap-2 flex-wrap">
             {winners.map(w => (
-              <span key={w} className="text-2xl font-black text-slate-800">@{w}</span>
+              <span key={w} className="text-2xl font-black text-slate-800"><a href={`https://instagram.com/${w}/`} target="_blank">@{w}</a></span>
             ))}
           </div>
         </motion.div>
